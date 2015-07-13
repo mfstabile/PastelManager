@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pastels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pastels.each do |pastel| %>
+      <tr>
+        <td><%= pastel.nome %></td>
+        <td><%= link_to 'Show', pastel %></td>
+        <td><%= link_to 'Edit', edit_pastel_path(pastel) %></td>
+        <td><%= link_to 'Destroy', pastel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pastel', new_pastel_path %>

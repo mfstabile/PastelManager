@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Pastel.create!(:nome => "Carne")
+Pastel.create!(:nome => "Carne com Cheddar")
+Pastel.create!(:nome => "Carne com Queijo")
+Pastel.create!(:nome => "Carne com Ovo")
+Pastel.create!(:nome => "Queijo")
+Pastel.create!(:nome => "Pizza")
+Pastel.create!(:nome => "Escarola")
+Pastel.create!(:nome => "Frango com Catupiry")
