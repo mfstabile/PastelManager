@@ -11,10 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713000802) do
+ActiveRecord::Schema.define(version: 20150713011823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "climas", force: :cascade do |t|
+    t.string   "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pastel_quantidades", force: :cascade do |t|
+    t.integer  "pastel_id"
+    t.integer  "quantidade"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "pastel_quantidades", ["pastel_id"], name: "index_pastel_quantidades_on_pastel_id", using: :btree
 
   create_table "pastels", force: :cascade do |t|
     t.string   "nome"
@@ -22,4 +37,11 @@ ActiveRecord::Schema.define(version: 20150713000802) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "qualidades", force: :cascade do |t|
+    t.string   "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "pastel_quantidades", "pastels"
 end
