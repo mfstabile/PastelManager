@@ -13,3 +13,12 @@ Pastel.create!(:nome => "Queijo")
 Pastel.create!(:nome => "Pizza")
 Pastel.create!(:nome => "Escarola")
 Pastel.create!(:nome => "Frango com Catupiry")
+
+Qualidade.create!(:descricao => "Bom")
+Qualidade.create!(:descricao => "Normal")
+Qualidade.create!(:descricao => "Ruim")
+
+Clima.create!(:descricao => "Calor")
+Clima.create!(:descricao => "Frio")
+Clima.create!(:descricao => "Calor e Chuva")
+Clima.create!(:descricao => "Frio e Chuva")
